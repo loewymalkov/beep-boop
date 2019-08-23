@@ -1,0 +1,25 @@
+h1 {
+  text-align: center;
+  margin: 1em;
+}
+
+.form-group {
+  text-align: center;
+}
+
+input {
+  margin: 0.8em;
+}
+
+label {
+  margin: 0.8em;
+}
+
+button {
+  margin: 1em;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+
