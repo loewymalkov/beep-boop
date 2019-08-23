@@ -10,15 +10,19 @@ for (var i = 0; i <= input; i++) {
   console.log(userInputRange);
 };
 var outputArray = [...userInputRange];
-console.log(outputArray);
+
 
 // make a for loop to go through all the elements w/ rules
 
 for (var i=0; i < outputArray.length; i++) {
-  if (outputArray[i].split() === 1 ) {
-    
+    if ((outputArray[i].toString().split()) == 1 ) {
+      outputArray.splice(i, 1, "Beep!")
+  } else {
+    console.log('nothing to replace')
   }
-}
+  console.log(outputArray);
+};
+
 // numbers that contain a 1 --> replace with "Beep!"
 if (outputArray.includes(1)) {
   outputArray.splice(index, "Beep!");
@@ -39,6 +43,7 @@ if (outputArray == 3) {
 
 };
 
+// reverse operation order so that rule 3 takes presedence over 2&1 and 2 over 1
 
 
 // front end ui
