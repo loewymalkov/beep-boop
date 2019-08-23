@@ -7,19 +7,20 @@ var userInputRange = [];
 // return a range of numbers starting at 0 to the user inputted number
 for (var i = 0; i <= input; i++) {
   userInputRange.push(i); 
-  console.log(userInputRange);
+  // console.log(userInputRange);
 };
 var outputArray = [...userInputRange];
 
-
 // make a for loop to go through all the elements w/ rules
 
-for (var i=0; i < outputArray.length; i++) {
-    if ((outputArray[i].toString().split()) == 1 ) {
+for (var i=1; i <= outputArray.length; i++) {
+  var stringNumber = outputArray[i].toString();
+  var splitArray = (stringNumber + '').split();
+    if (splitArray[0].includes("1")) {
       outputArray.splice(i, 1, "Beep!")
-  } else {
-    console.log('nothing to replace')
-  }
+    } else {
+      console.log('nothing to replace');
+    };
   console.log(outputArray);
 };
 
