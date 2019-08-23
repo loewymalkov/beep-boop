@@ -51,7 +51,9 @@ if (outputArray == 3) {
 $(document).ready(function(){
   $("form#userInput").submit(function(event) {
     event.preventDefault();
-
+    // call userInputRange functions
+    // call outputArray functions
+    // display outputArray to display
   })
 
 });
