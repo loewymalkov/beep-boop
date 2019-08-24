@@ -2,7 +2,7 @@
 
 ### USE
 
-This page will take a number and display a range of numbers and expressions, i.e. for 5 it will display "0, "Beep!", "Boop!", "I'm sorry[...]", 4, 5".
+This page will take a number and name and display a range of numbers and expressions, i.e. for 5 it will display "0, "Beep!", "Boop!", "I'm sorry[...]", 4, 5".
 
 ### SET UP
 
