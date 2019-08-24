@@ -1,11 +1,9 @@
 // business logic
-var inputNumber = "";
-var userName = "";
-var userInputRange = [];
+// var inputNumber = "";
+// var userName = "";
 
 function createOutput (inputNumber, userName) {
-
-
+  var userInputRange = [];
 // return a range of numbers starting at 0 to the user inputted number
   for (var i = 0; i <= inputNumber; i++) {
     userInputRange.push(i); 
@@ -14,7 +12,7 @@ function createOutput (inputNumber, userName) {
   var outputArray = [...userInputRange];
 
   // make a for loop to go through all the elements and check for inclusion
-  for (var i=1; i <= outputArray.length; i++) {
+  for (var i=0; i < outputArray.length; i++) {
     var stringNumber = outputArray[i].toString();
     var splitArray = (stringNumber + '').split();
       if (splitArray[0].includes("3")) {
@@ -26,18 +24,21 @@ function createOutput (inputNumber, userName) {
       } else {
         console.log('nothing to replace');
       };
-    console.log(outputArray);
-  };
-  return outputArray;
+    };
+    return outputArray;
 };
 
 // front end ui
 $(document).ready(function() {
   $("form#user-input").submit(function(event) {
     event.preventDefault();
-    var inputNumber = $("user-number").val();
+    var inputNumber = $("#user-number").val();
     var userName = $("#user-name").val();
-    createOutput(inputNumber, userName);
-    $("#output").text(outputArray);
+    var displayArray = createOutput(inputNumber, userName);
+    console.log(displayArray);
+    $("#output").text(displayArray.map(function(x) {
+      return (' "' + x.toString() + '"');
+    }));
   });
 });
+
